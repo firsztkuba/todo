@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-m@*a@6%4s283f)^v7rdu7)x=e+#f)*ub($2)n1t59ms9-^+=gu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
+DEBUG = True
+# DEBUG = (os.environ.get("DEBUG_VALUE") == "True")
 
 ALLOWED_HOSTS = ['kubatodoapp.herokuapp.com']
 
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tasks',
     'crispy_forms',
+    'rest_framework',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
